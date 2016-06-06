@@ -1,0 +1,20 @@
+{
+  "name": "jaero",
+  "description": "",
+  "main": "Gruntfile.js",
+  "authors": [
+    "vd <vd@norse.digital>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/vendor",
+    "test",
+    "tests"
+  ]
+}
