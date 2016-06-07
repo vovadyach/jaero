@@ -1,0 +1,60 @@
+//variables.scss
+
+//Sets bacground color
+$bg-primary-color: #007dc6;
+$bg-body-color: #f2f2f2;
+$bg-nav-color: #fff;
+
+//Sets overlay color (modal/menu)
+$overlay-color: rgba(175,175,175,0.72);
+$overlay-shadow: #797979;
+
+$header-icon-color: #b7daef;
+
+//Sets text color
+$main-color: #9e878b;
+$secondary-color: #333;
+$ternary-ternary: #f3fffb;
+
+//Sets text size
+// $text-main-size;
+// $base-font-weight;
+
+// Font weights
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+// Base Font
+$base-font-weight: $regular;
+
+//== Media queries breakpoints
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+// Extra small screen / phone
+$screen-xs: 375px;
+$screen-xs-min: $screen-xs;
+
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
+
+// Medium screen / desktop
+$screen-md: 992px;
+$screen-md-min: $screen-md;
+
+//Large screen / wide desktop
+$screen-lg: 1440px;
+$screen-lg-min: $screen-lg;
+
+//Huge screen / wide screen
+$screen-hg: 1920px;
+$screen-hg-min: $screen-hg;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+$screen-lg-max: ($screen-hg-min - 1);
+/// Container's maximum width
+/// @type Length
+$max-width: 1950px;
+

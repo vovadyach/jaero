@@ -1,9 +1,15 @@
 /**
  * Created by VVD at NorseDigital on 6/6/16.
  */
+
+'use strict';
+
 module.exports = function(grunt) {
-  "use strict";
+
   require('load-grunt-tasks')(grunt);
+
+  // Time how long tasks take. Can help when optimizing build times
+  require('time-grunt')(grunt);
 
   //Project configuration
   grunt.initConfig({
@@ -17,7 +23,8 @@ module.exports = function(grunt) {
         cwd: 'src',
         src: [
           'images/**/*',
-          'js/**/*'
+          'js/**/*',
+          'vendor/jquery/dist/jquery.min.js'
         ],
         dest: 'build',
         file: 'isFile'
@@ -31,7 +38,7 @@ module.exports = function(grunt) {
           sourceMap: true
         },
         files: {
-          'build/stylesheets/style.min.css' : 'src/sass/main.scss'
+          'build/stylesheets/style.min.css': 'src/sass/main.scss'
         }
       }
     },
@@ -78,12 +85,34 @@ module.exports = function(grunt) {
           livereload: true
         }
       }
+    },
+
+    jshint: {
+      options: {
+        jshintrc: '.jshintrc',
+        reporter: require('jshint-stylish')
+      },
+
+      all: ['Gruntfile.js', 'src/js/**/*.js']
+    },
+
+    uncss: {
+      dist: {
+        files: {
+          'build/stylesheets/style.min.css': ['build/index.html']
+        }
+      }
     }
-
-
 
   });
 
-  grunt.registerTask('start', ['clean', 'copy', 'sass', 'includereplacemore', 'express', 'open', 'watch']);
+  //Builds the project
+  grunt.registerTask('build', ['clean', 'copy', 'sass', 'includereplacemore', 'express', 'open', 'watch']);
+
+  //Tests
+  grunt.registerTask('test', ['jshint']);
+  //Deletes unused css
+  //
+  grunt.registerTask('build-uncss', ['build', 'uncss']);
 
 };

@@ -1,5 +1,7 @@
-//Main.scss
+////Main.scss
+//@import '../bootstrap-sass/vendor/assets/stylesheets/bootstrap';
+//src/vendor/bootstrap-sass/assets/stylesheets/_bootstrap.scss
 
-body {
-  background-color: #000;
-}
+@import 'base/_variables.scss';
+
+@import '../vendor/bootstrap-sass/assets/stylesheets/_bootstrap.scss';

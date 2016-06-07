@@ -1,0 +1,11 @@
+//typography.scss
+
+body {
+  color: $main-color;
+  font-family: $text-font-stack;
+}
+
+p {
+  font-size: $text-main-size;
+  font-weight: $base-font-weight;
+}
