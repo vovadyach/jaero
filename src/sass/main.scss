@@ -5,3 +5,16 @@
 @import 'base/_variables.scss';
 
 @import '../vendor/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+
+@import 'base/_base.scss';
+@import 'base/_typography.scss';
+@import 'base/_normalize.scss';
+
+@import 'components/_navigation.scss';
+@import 'components/_block.scss';
+@import 'components/_buttons.scss';
+
+@import 'layout/_header.scss';
+@import 'layout/_footer.scss';
+
+@import 'utilities/_helpers.scss';

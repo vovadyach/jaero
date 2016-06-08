@@ -1,0 +1,37 @@
+.header {
+  background-color: #007dc6;
+  height: 55px;
+  overflow: hidden;
+}
+.header-title {
+  padding: 12px 23px;
+  float: left;
+}
+.header-link {
+  &:focus {
+    color: $text-color;
+  }
+  &:hover {
+    color: $ternary-color;
+    text-decoration: none;
+  }
+}
+
+.title-text {
+  color: $ternary-color;
+  font-size: 20px;
+  font-weight: $regular;
+}
+.header-search {
+  @extend .clearfix;
+}
+.search-item {
+  float: right;
+}
+.material-search {
+  color: $header-icon-color;
+}
+.search-item {
+  padding-right: 11px;
+  padding-top: 14px;
+}

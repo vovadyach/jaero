@@ -1,4 +1,29 @@
 //utilities.scss
-/**
- * Clear inner floats
- */
+
+//Aligns div vertically
+.vertical-middle {
+  font-size: 0;
+  height: 100%;
+  &:after {
+    vertical-align: middle;
+    display: inline-block;
+    content: "";
+    height: 100%;
+  }
+  & > * {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: $text-main-size;
+  }
+}
+
+.reset-child-margin {
+  & > * {
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

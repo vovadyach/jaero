@@ -5,8 +5,14 @@
 /**
  * Set up a decent box model on the root element
  */
+html,
+body {
+  height: 100%;
+}
+
 body {
   position: relative;
+  background-color: $bg-body-color;
 }
 
 /**
@@ -39,3 +45,5 @@ a {
     color: $main-color;
   }
 }
+
+

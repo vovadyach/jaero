@@ -1,0 +1,7 @@
+//block.scss
+
+.content-container,
+.layout {
+  @extend .clearfix;
+  height: 100%;
+}
