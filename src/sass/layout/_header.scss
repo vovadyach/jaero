@@ -1,11 +1,15 @@
 .header {
+  position: relative;
   background-color: #007dc6;
-  height: 55px;
+  height: $header-h;
   overflow: hidden;
+  z-index: 3;
+}
+.header-container {
+  padding: 0 15px;
 }
 .header-title {
-  padding: 12px 23px;
-  float: left;
+  overflow: hidden;
 }
 .header-link {
   &:focus {
@@ -20,18 +24,28 @@
 .title-text {
   color: $ternary-color;
   font-size: 20px;
+  padding-left: 8px;
   font-weight: $regular;
+  white-space: nowrap;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .header-search {
   @extend .clearfix;
-}
-.search-item {
   float: right;
+}
+.header-title,
+.header-search {
+  padding: 13px 0;
+}
+.header-search {
+  padding-right: 5px;
 }
 .material-search {
   color: $header-icon-color;
 }
-.search-item {
-  padding-right: 11px;
-  padding-top: 14px;
+
+.hamburger {
+
 }
